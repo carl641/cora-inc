@@ -1,0 +1,55 @@
+// Cora Environmental — site interactions
+
+(function () {
+  'use strict';
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close nav when a link is clicked (on mobile)
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // Footer year
+  var yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Contact form (client-side only — no backend wired up)
+  var form = document.getElementById('contactForm');
+  var note = document.getElementById('formNote');
+  if (form && note) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var name = form.querySelector('#name');
+      var email = form.querySelector('#email');
+      var message = form.querySelector('#message');
+
+      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        note.style.color = '#b23a3a';
+        note.textContent = 'Please fill in your name, email, and a brief message.';
+        return;
+      }
+
+      // Simulated success (no backend here — replace with real endpoint in production)
+      note.style.color = '';
+      note.textContent = 'Thanks! Your message has been received. We will follow up shortly.';
+      form.reset();
+    });
+  }
+})();
