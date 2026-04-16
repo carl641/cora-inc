@@ -238,7 +238,16 @@ p { margin: 0 0 1em; }
   border-radius: 2px;
 }
 
-.nav-cta { padding: 0.7rem 1.15rem; font-size: 0.88rem; }
+.nav-cta {
+  padding: 0.95rem 1.75rem;
+  font-size: 0.88rem;
+  color: #fff;
+}
+.nav-cta:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
 
 .nav-toggle {
   display: none;
