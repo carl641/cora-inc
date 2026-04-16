@@ -569,10 +569,29 @@ p { margin: 0 0 1em; }
   background: linear-gradient(135deg, var(--navy), var(--teal));
   color: #e8f0f4;
   padding: 4.5rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
 }
+.page-hero > .container { position: relative; z-index: 1; }
 .page-hero h1 { color: #fff; }
 .page-hero .eyebrow { color: #ffb3b3; }
 .page-hero .lead { color: #e3ecf4; }
+
+.page-hero--services {
+  background:
+    linear-gradient(135deg, rgba(0, 58, 117, 0.82) 0%, rgba(0, 117, 229, 0.72) 100%),
+    url('https://1hzgblwwmf.ucarecd.net/443b18a6-cbd8-4b49-9d6b-2379f1743793/-/preview/1000x1000/') center/cover no-repeat;
+}
+.page-hero--about {
+  background:
+    linear-gradient(135deg, rgba(0, 58, 117, 0.82) 0%, rgba(0, 117, 229, 0.72) 100%),
+    url('https://1hzgblwwmf.ucarecd.net/e3162ae2-ee4a-4bc0-b6d9-2c3bad4796ad/-/preview/1000x1000/') center/cover no-repeat;
+}
+.page-hero--contact {
+  background:
+    linear-gradient(135deg, rgba(0, 58, 117, 0.82) 0%, rgba(0, 117, 229, 0.72) 100%),
+    url('https://1hzgblwwmf.ucarecd.net/d8013e62-a489-4c93-a652-abb2a9720e35/-/preview/1000x738/') center/cover no-repeat;
+}
 
 /* ==========================================================================
    Services detail
