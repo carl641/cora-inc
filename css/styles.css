@@ -238,12 +238,12 @@ p { margin: 0 0 1em; }
   border-radius: 2px;
 }
 
-.nav-cta {
+.site-nav a.nav-cta {
   padding: 0.95rem 1.75rem;
   font-size: 0.88rem;
   color: #fff;
 }
-.nav-cta:hover {
+.site-nav a.nav-cta:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
