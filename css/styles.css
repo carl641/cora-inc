@@ -599,8 +599,15 @@ p { margin: 0 0 1em; }
   box-shadow: var(--shadow-md);
   position: sticky;
   top: 6rem;
+  overflow: hidden;
 }
 .media-icon { font-size: 3.5rem; }
+.media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .service-detail.alt .service-detail-media {
   background: linear-gradient(135deg, var(--green-dark), var(--green));
@@ -781,7 +788,7 @@ p { margin: 0 0 1em; }
   .hero-inner { grid-template-columns: 1fr; padding: 3.5rem 1.25rem; }
   .hero-card { max-width: 520px; }
   .services-detail .service-detail { grid-template-columns: 1fr; gap: 1.5rem; }
-  .service-detail-media { aspect-ratio: auto; padding: 2rem; position: static; }
+  .service-detail-media { aspect-ratio: 16 / 9; padding: 0; position: static; }
   .media-icon { font-size: 2.5rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .area-list { grid-template-columns: repeat(3, 1fr); }
