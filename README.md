@@ -8,10 +8,10 @@ A static, responsive, multi-page website built with plain HTML, CSS, and a small
 
 ## Pages
 
-- `index.html` — Home, with hero, service highlights, value props, service area, and CTAs
-- `services.html` — Full breakdown of all septic services with anchor links
-- `about.html` — Company story, values, credentials
-- `contact.html` — Contact info, quote request form, and FAQ
+- `/` (`index.html`) — Home, with hero, service highlights, value props, service area, and CTAs
+- `/services` (`services/index.html`) — Full breakdown of all septic services with anchor links
+- `/about` (`about/index.html`) — Company story, values, credentials
+- `/contact` (`contact/index.html`) — Contact info, quote request form, and FAQ
 
 ## Services covered
 
@@ -29,18 +29,23 @@ A static, responsive, multi-page website built with plain HTML, CSS, and a small
 ```
 .
 ├── index.html
-├── services.html
-├── about.html
-├── contact.html
+├── services/
+│   └── index.html
+├── about/
+│   └── index.html
+├── contact/
+│   └── index.html
 ├── css/
 │   └── styles.css
 └── js/
     └── main.js
 ```
 
+Each page lives in its own directory so URLs resolve without a `.html` extension (e.g. `/about`, `/services`, `/contact`) on any static host.
+
 ## Running locally
 
-It's a static site — open `index.html` directly in a browser, or serve the directory with any static server:
+It's a static site — serve the directory with any static server so the clean URLs resolve correctly:
 
 ```sh
 python3 -m http.server 8000
