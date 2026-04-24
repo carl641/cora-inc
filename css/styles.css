@@ -382,6 +382,11 @@ p { margin: 0 0 1em; }
   max-width: 720px;
   margin: 0 auto 3rem;
 }
+.section-head--divider {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--line, #e5e1d8);
+}
 .section-head .section-sub {
   color: var(--ink-soft);
   font-size: 1.05rem;
