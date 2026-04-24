@@ -142,6 +142,27 @@ p { margin: 0 0 1em; }
 .btn-ghost-light:hover { background: #fff; color: var(--navy); }
 
 /* ==========================================================================
+   Emergency banner
+   ========================================================================== */
+.emergency-banner {
+  background: var(--navy-dark);
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 1.25rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .emergency-banner {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ==========================================================================
    Header
    ========================================================================== */
 .site-header {
