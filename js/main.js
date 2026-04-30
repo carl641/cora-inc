@@ -48,8 +48,9 @@
 
       // Simulated success (no backend here — replace with real endpoint in production)
       note.style.color = '';
-      note.textContent = 'Thanks! Your message has been received. We will follow up shortly.';
+      note.textContent = 'Thanks! Your message has been received. Redirecting...';
       form.reset();
+      window.location.href = form.getAttribute('data-thanks-url') || '/thanks/';
     });
   }
 })();
