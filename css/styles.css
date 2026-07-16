@@ -237,6 +237,12 @@ p { margin: 0 0 1em; }
   margin: 0;
   gap: 1.5rem;
 }
+/* Keep every top-level nav item on the same baseline, including the
+   flex-based Services dropdown item (scoped to the top row only so the
+   vertical submenu is unaffected). */
+.site-nav > ul {
+  align-items: center;
+}
 .site-nav a {
   color: var(--navy);
   font-weight: 500;
@@ -292,7 +298,8 @@ p { margin: 0 0 1em; }
   justify-content: center;
   background: transparent;
   border: 0;
-  padding: 0.4rem 0.3rem;
+  padding: 0.2rem 0.2rem;
+  margin-left: 0.1rem;
   cursor: pointer;
   color: var(--navy);
   line-height: 1;
