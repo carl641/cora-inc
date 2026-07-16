@@ -11,6 +11,51 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://coraenvironmental.com/services/septic-tank-pumping/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/grease-trap-pumping/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/hydro-jetting/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/drain-field-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/hydro-excavation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/lift-station-repair/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/septic-repairs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/septic-inspections/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/services/sewer-camera-inspection/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://coraenvironmental.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
