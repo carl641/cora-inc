@@ -278,6 +278,91 @@ p { margin: 0 0 1em; }
 }
 
 /* ==========================================================================
+   Services dropdown menu
+   ========================================================================== */
+.has-submenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+.submenu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0.3rem;
+  cursor: pointer;
+  color: var(--navy);
+  line-height: 1;
+}
+.chev {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.2s ease;
+}
+.has-submenu:hover .submenu-toggle,
+.has-submenu:focus-within .submenu-toggle,
+.has-submenu.open .submenu-toggle { color: var(--green-dark); }
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  z-index: 60;
+}
+/* Hover bridge so the pointer can travel from the label to the panel */
+.has-submenu::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+}
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu,
+.has-submenu.open .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.has-submenu.open .chev { transform: rotate(180deg); }
+.submenu li { margin: 0; border: 0; }
+.submenu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--navy);
+}
+.submenu a::after { display: none !important; }
+.submenu a:hover,
+.submenu a:focus { background: var(--sand); color: var(--green-dark); }
+
+/* ==========================================================================
    Hero
    ========================================================================== */
 .hero {
@@ -912,6 +997,33 @@ p { margin: 0 0 1em; }
     padding: 0.9rem 0;
   }
   .site-nav ul a.active::after { display: none; }
+
+  /* Services dropdown becomes an inline accordion on mobile */
+  .has-submenu { flex-wrap: wrap; }
+  .has-submenu > a { flex: 1 1 auto; }
+  .has-submenu::after { display: none; }
+  .submenu-toggle { padding: 0.9rem 0.4rem; color: var(--navy); }
+  .submenu {
+    position: static;
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--sand);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .has-submenu.open .submenu { max-height: 620px; }
+  .submenu li { border: 0; }
+  .submenu li + li { border-top: 1px solid var(--line); }
+  .submenu a { padding: 0.8rem 1rem; }
 
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }

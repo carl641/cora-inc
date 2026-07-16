@@ -23,6 +23,38 @@
     });
   }
 
+  // Services dropdown submenu
+  var submenus = document.querySelectorAll('.has-submenu');
+  submenus.forEach(function (item) {
+    var btn = item.querySelector('.submenu-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  // Close any open dropdown when clicking outside or pressing Escape
+  document.addEventListener('click', function (e) {
+    submenus.forEach(function (item) {
+      if (item.classList.contains('open') && !item.contains(e.target)) {
+        item.classList.remove('open');
+        var b = item.querySelector('.submenu-toggle');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    submenus.forEach(function (item) {
+      item.classList.remove('open');
+      var b = item.querySelector('.submenu-toggle');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   // Footer year
   var yearEl = document.getElementById('year');
   if (yearEl) {
