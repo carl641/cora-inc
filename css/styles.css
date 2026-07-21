@@ -989,14 +989,20 @@ p { margin: 0 0 1em; }
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 1rem 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--line);
-    box-shadow: var(--shadow-md);
+    /* Vertical padding lives on .open only. With box-sizing: border-box a box
+       can't shrink below its padding, so keeping top/bottom padding here would
+       leave the closed menu ~40px tall and let the first link peek out. */
+    padding: 0 1.25rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease;
   }
-  .site-nav.open { max-height: 480px; }
+  .site-nav.open {
+    max-height: 480px;
+    padding: 1rem 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+  }
   .site-nav ul { flex-direction: column; gap: 0; }
   .site-nav ul li { border-bottom: 1px solid var(--line); }
   .site-nav ul a {
