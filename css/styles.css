@@ -695,6 +695,9 @@ p { margin: 0 0 1em; }
 .page-hero .eyebrow { color: #ffd1d1; }
 .page-hero .lead { color: #ffe8e8; }
 
+/* Title-first heroes: the h1 leads the page and the breadcrumb sits beneath it */
+.page-hero h1:first-child { margin-bottom: 0.7rem; }
+
 .page-hero--services {
   background:
     linear-gradient(135deg, rgba(218, 0, 0, 0.88) 0%, rgba(160, 0, 0, 0.82) 100%),
