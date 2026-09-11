@@ -12,6 +12,8 @@ A static, responsive, multi-page website built with plain HTML, CSS, and a small
 - `/services` (`services/index.html`) — Full breakdown of all septic services with anchor links
 - `/about` (`about/index.html`) — Company story, values, credentials
 - `/contact` (`contact/index.html`) — Contact info, quote request form, and FAQ
+- `/blog` (`blog/index.html`) — Blog index listing published articles
+- `/blog/<post-slug>/` — Individual blog posts (e.g. `blog/septic-system-installation-huntsville-al/`)
 
 ## Services covered
 
@@ -35,6 +37,10 @@ A static, responsive, multi-page website built with plain HTML, CSS, and a small
 │   └── index.html
 ├── contact/
 │   └── index.html
+├── blog/
+│   ├── index.html
+│   └── septic-system-installation-huntsville-al/
+│       └── index.html
 ├── css/
 │   └── styles.css
 └── js/
@@ -56,4 +62,5 @@ Then visit <http://localhost:8000>.
 ## Notes
 
 - The phone number, email, and testimonials are placeholders and should be replaced with real values before launch.
+- To add a blog post: copy an existing post directory under `blog/`, rename it to the new slug, update the `<title>`, meta description, canonical URL, JSON-LD, and body copy — then add a matching `.post-card` to `blog/index.html` and a `<url>` entry to `sitemap.xml`.
 - The contact form is currently client-side only. To accept real submissions, wire the form to a backend endpoint or form service (Formspree, Netlify Forms, etc.).
