@@ -56,6 +56,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://coraenvironmental.com/huntsville-madison-county/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/decatur-morgan-county/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coraenvironmental.com/athens-limestone-county/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://coraenvironmental.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

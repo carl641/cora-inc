@@ -369,6 +369,33 @@ p { margin: 0 0 1em; }
 .submenu a:hover,
 .submenu a:focus { background: var(--sand); color: var(--green-dark); }
 
+/* Dropdown parents that open a menu instead of linking to a page (Areas) */
+.site-nav .submenu-toggle.nav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0;
+  padding: 0.4rem 0;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+.site-nav .submenu-toggle.nav-label:hover,
+.site-nav .submenu-toggle.nav-label.active,
+.has-submenu.open .submenu-toggle.nav-label { color: var(--green-dark); }
+.nav-label-text { position: relative; }
+.site-nav .submenu-toggle.nav-label.active .nav-label-text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */
@@ -647,6 +674,12 @@ p { margin: 0 0 1em; }
   max-width: 860px;
   margin-inline: auto;
 }
+.area-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
 .area-list li {
   background: var(--white);
   border: 1px solid var(--line);
@@ -712,6 +745,23 @@ p { margin: 0 0 1em; }
   background:
     linear-gradient(135deg, rgba(218, 0, 0, 0.88) 0%, rgba(160, 0, 0, 0.82) 100%),
     url('https://1hzgblwwmf.ucarecd.net/d8013e62-a489-4c93-a652-abb2a9720e35/-/preview/1000x738/') center/cover no-repeat;
+}
+
+/* Service-area (county) pages */
+.page-hero--area-madison {
+  background:
+    linear-gradient(135deg, rgba(218, 0, 0, 0.88) 0%, rgba(160, 0, 0, 0.82) 100%),
+    url('https://1hzgblwwmf.ucarecd.net/27d956ba-ab8b-4d5d-9db2-6671f9c278cc/-/preview/1000x656/') center/cover no-repeat;
+}
+.page-hero--area-morgan {
+  background:
+    linear-gradient(135deg, rgba(218, 0, 0, 0.88) 0%, rgba(160, 0, 0, 0.82) 100%),
+    url('https://1hzgblwwmf.ucarecd.net/42272181-7904-4642-a11e-24414c9f8f29/-/preview/1000x750/') center/cover no-repeat;
+}
+.page-hero--area-limestone {
+  background:
+    linear-gradient(135deg, rgba(218, 0, 0, 0.88) 0%, rgba(160, 0, 0, 0.82) 100%),
+    url('https://1hzgblwwmf.ucarecd.net/35267adb-1f1e-47eb-acf8-8005d01e6e85/-/preview/750x1000/') center/cover no-repeat;
 }
 
 /* ==========================================================================
@@ -927,7 +977,7 @@ p { margin: 0 0 1em; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.3fr 0.95fr 1.3fr 0.75fr 1.15fr;
   gap: 2.5rem;
   margin-bottom: 2.5rem;
 }
@@ -999,7 +1049,7 @@ p { margin: 0 0 1em; }
     overflow: hidden;
     transition: max-height 0.25s ease;
   }
-  .site-nav.open { max-height: 540px; }
+  .site-nav.open { max-height: 1200px; }
   .site-nav ul { flex-direction: column; gap: 0; }
   .site-nav ul li { border-bottom: 1px solid var(--line); }
   .site-nav ul a {
@@ -1013,6 +1063,14 @@ p { margin: 0 0 1em; }
   .has-submenu > a { flex: 1 1 auto; }
   .has-submenu::after { display: none; }
   .submenu-toggle { padding: 0.9rem 0.4rem; color: var(--navy); }
+  .site-nav .submenu-toggle.nav-label {
+    flex: 1 1 auto;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.9rem 0.4rem 0.9rem 0;
+    text-align: left;
+  }
+  .site-nav .submenu-toggle.nav-label.active .nav-label-text::after { display: none; }
   .submenu {
     position: static;
     width: 100%;
