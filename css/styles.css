@@ -1475,6 +1475,13 @@ p { margin: 0 0 1em; }
 .price-factors { margin-top: 3rem; }
 .check-list li strong { color: var(--ink); }
 .table-note { font-size: 0.92rem; color: var(--ink-soft); margin-top: 0.75rem; }
+.price-disclaimer {
+  background: var(--white);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.15rem;
+}
+.price-disclaimer strong { color: var(--ink); }
 
 /* Service page: numbered process steps */
 .step-list { list-style: none; padding: 0; margin: 0; }
