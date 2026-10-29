@@ -1450,6 +1450,36 @@ p { margin: 0 0 1em; }
 }
 .next-steps-note { max-width: 780px; margin: 2rem auto 0; text-align: center; color: var(--ink-soft); }
 
+/* Service page: hero trust bar */
+.trust-bar {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem 1.75rem;
+}
+.trust-bar li { font-size: 0.88rem; color: #ffe8e8; line-height: 1.45; }
+.trust-bar strong { display: block; color: #fff; font-size: 0.95rem; margin-bottom: 0.15rem; }
+.trust-bar a { color: #fff; text-decoration: underline; }
+.page-hero .hero-actions { margin: 1.5rem 0 1.75rem; }
+.page-hero .hero-actions .btn-primary { background: #fff; color: var(--navy); border-color: #fff; }
+.page-hero .hero-actions .btn-primary:hover { background: #ffe8e8; color: var(--navy-dark); }
+
+/* Service page: pricing + frequency tables */
+.section .table-wrap { margin-top: 0; }
+.price-table td.price { font-weight: 700; color: var(--navy); white-space: nowrap; }
+.price-note { display: block; font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); }
+.freq-table td { white-space: nowrap; }
+.price-factors { margin-top: 3rem; }
+.check-list li strong { color: var(--ink); }
+.table-note { font-size: 0.92rem; color: var(--ink-soft); margin-top: 0.75rem; }
+
+/* Service page: numbered process steps */
+.step-list { list-style: none; padding: 0; margin: 0; }
+.warning-aside { display: grid; gap: 1.5rem; align-content: start; }
+
 @media (max-width: 960px) {
   .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .post-featured { grid-template-columns: 1fr; }
@@ -1459,7 +1489,12 @@ p { margin: 0 0 1em; }
   .article-aside { position: static; max-width: 520px; }
 }
 
+@media (max-width: 960px) {
+  .trust-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 780px) {
   .blog-grid { grid-template-columns: minmax(0, 1fr); }
+  .trust-bar { grid-template-columns: minmax(0, 1fr); }
   .article-body { max-width: none; }
 }
