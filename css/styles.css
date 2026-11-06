@@ -1505,3 +1505,30 @@ p { margin: 0 0 1em; }
   .trust-bar { grid-template-columns: minmax(0, 1fr); }
   .article-body { max-width: none; }
 }
+
+/* ==========================================================================
+   Google Map embed
+   ========================================================================== */
+.map-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  background: var(--sand);
+}
+.map-embed--spaced { margin-top: 2.5rem; }
+.map-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.map-actions { margin-top: 1.75rem; }
+.map-caption { margin-top: 1.25rem; color: var(--ink-soft); }
+@media (max-width: 780px) {
+  .map-embed { aspect-ratio: 4 / 3; }
+}
