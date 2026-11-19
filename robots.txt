@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://huntsvillesepticpumping.com/sitemap.xml
